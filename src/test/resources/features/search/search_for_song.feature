@@ -8,5 +8,5 @@ Feature: Search for a song
     When he search for the song <song> of <artist>
     Then he should see that song exist in spotify
     Examples:
-      | song              | artist  |
-      | Pienso en tu mira | Rosalia |
+      | song    | artist        |
+      | bad guy | Billie Eilish |

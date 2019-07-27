@@ -20,21 +20,22 @@ import static org.hamcrest.Matchers.is;
 public class VerifySongExist implements Task {
 
 
-    public VerifySongExist() {
-
+    public VerifySongExist(String song) {
+        this.song = song;
     }
+
     private String song;
 
     public static VerifySongExist withName(String song){
         return instrumented(VerifySongExist.class, song);
     }
+
     @Override
     public <T extends Actor> void performAs(T t) {
-        String artist = theActorInTheSpotlight().recall(Constants.ARTIST);
-       theActorInTheSpotlight().should(
+        theActorInTheSpotlight().should(
                seeThat(the(SearchPage.SEARCH_RESULT_TITLE), isVisible()),
                seeThat(Song.name(), containsString(song)),
-               seeThat(Song.artistName(), containsString(artist))
+               seeThat(Song.artistName(), containsString(theActorInTheSpotlight().recall(Constants.ARTIST)))
         );
 
     }

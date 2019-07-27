@@ -11,9 +11,9 @@ public class SearchPage {
     public static Target SEARCH_QUERY_FIElD= Target.the("Search Query Title").located(MobileBy.id("com.spotify.music:id/query"));
     public static Target SEARCH_RESULT_LABELS= Target.the("Search Results Labels").located(MobileBy.id("com.spotify.music:id/labels"));
     public static Target SEARCH_RESULT_ROWS= Target.the("Search Query result Rows").located(MobileBy.id("com.spotify.music:id/row_view"));
-    public static Target SEARCH_RESULT_TITLE= Target.the("Search Result Title").located(MobileBy.id("com.spotify.music:id/text1"));
+    public static Target SEARCH_RESULT_TITLE= Target.the("Search Result Title").located(MobileBy.id("android:id/text1"));
     public static Target FIRST_SEARCH_RESULT= Target.the("First Search Result Title").located(MobileBy.id("com.spotify.music:id/labels"));
-    public static Target SEARCH_RESULT_TYPE= Target.the("Search Result Type").located(MobileBy.id("com.spotify.music:id/text2"));
+    public static Target SEARCH_RESULT_TYPE= Target.the("Search Result Type").located(MobileBy.id("android:id/text2"));
     public static Target SEARCH_RESULT_TYPE_OF= Target.the("Search Result Type").located(MobileBy.id("new UiSelector().resourceId(\"com.spotify.music:id/text2\").text(\"{0}\""));
     public static Target SEARCH_RESULT_NO_RESULTS= Target.the("Search Query Title").located(MobileBy.id("com.spotify.music:id/empty"));
     public static Target SEARCH_RESULT_NO_RESULTS_TITLE= Target.the("Search Query Title").located(MobileBy.id("com.spotify.music:id/title"));

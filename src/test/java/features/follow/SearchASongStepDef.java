@@ -19,7 +19,7 @@ public class SearchASongStepDef {
     }
 
     @Then("^he should see that song exist in spotify$")
-    public void he_is_not_now_following()  {
+    public void he_verify()  {
         theActorInTheSpotlight().attemptsTo(VerifySongExist.withName(theActorInTheSpotlight().recall(Constants.SONG)));
     }
 }
